@@ -10,6 +10,13 @@ class Beba extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'tezina',
+        'doktor_id'
+    ];
+
     public function doktor()
     {
         return $this->belongsTo(Doktor::class);

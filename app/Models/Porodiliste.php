@@ -10,6 +10,11 @@ class Porodiliste extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'naziv',
+        'grad'
+    ];
+
     public function doktori()
     {
         return $this->hasMany(Doktor::class);

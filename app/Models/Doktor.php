@@ -11,6 +11,13 @@ class Doktor extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'iskustvo',
+        'porodiliste_id'
+    ];
+
     public function porodiliste()
     {
         return $this->belongsTo(Porodiliste::class);
